@@ -6,9 +6,15 @@ function* handleImagesLoad() {
     console.log('Fetching images from Unsplash');
 }
 
+function* handleDang() {
+    console.log('handleDang!!');
+}
+
 // watcher saga
 function* rootSaga() {
+    // takeEvery is nonblocking where as take is blocking
     yield takeEvery(IMAGES.LOAD, handleImagesLoad);
+    yield takeEvery('DANG', handleDang);
 }
 
 // watcher saga listens for an action then invoke worker saga
