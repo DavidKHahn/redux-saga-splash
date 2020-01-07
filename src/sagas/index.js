@@ -8,7 +8,7 @@ function* handleImagesLoad() {
 
 // watcher saga
 function* rootSaga() {
-    takeEvery(IMAGES.LOAD, handleImagesLoad);
+    yield takeEvery(IMAGES.LOAD, handleImagesLoad);
 }
 
 // watcher saga listens for an action then invoke worker saga
