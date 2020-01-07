@@ -15,7 +15,6 @@ const configureStore = () => {
     );
     sagaMiddleware.run(rootSaga);
     // for demonstration to call worker saga
-    store.dispatch({ type: 'DANG' });
     return store;
 }
 
