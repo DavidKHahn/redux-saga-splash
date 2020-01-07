@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '../reducers';
-import rootSaga from '../sagas;';
+import rootSaga from '../sagas';
 
 const configureStore = () => {
     const sagaMiddleware = createSagaMiddleware()
@@ -15,7 +15,9 @@ const configureStore = () => {
     );
     sagaMiddleware.run(rootSaga);
     // for demonstration to call worker saga
-    store.dispatch({ type: 'HELLO' })
+    store.dispatch({ type: 'LOGOUT' })
+    store.dispatch({ type: 'LOGIN' })
+    store.dispatch({ type: 'LOGOUT' })
     return store;
 }
 
