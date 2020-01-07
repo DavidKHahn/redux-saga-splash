@@ -1,1 +1,1 @@
-# redux-saga-splash
+# SagaSplash
