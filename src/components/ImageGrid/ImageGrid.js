@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadImages } from '../../actions';
 import Button from '../Button';
+import Stats from '../Stats';
 import './styles.css';
 
 class ImageGrid extends Component {
