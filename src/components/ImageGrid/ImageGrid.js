@@ -18,7 +18,7 @@ class ImageGrid extends Component {
     }
 
     render() {
-        const { images } = this.props;
+        const { images, error } = this.props;
         return (
             <div className="content">
                 <section className="grid">
@@ -38,6 +38,7 @@ class ImageGrid extends Component {
 
                     <a onClick={this.props.loadImages}>Load Images</a>
                 </section>
+                {error && <div className="error">{JSON.stringify(error)}</div>}
             </div>
         );
     }
